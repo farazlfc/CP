@@ -8,7 +8,7 @@ dp = [[[-1]*26 for _ in range(n)] for _ in range(n)]
 
 print(len(dp),len(dp[0]),len(dp[0][0]))
 
-def f(s,p1,p2,last):   #call last with some shitty thing
+def f(s,p1,p2,last):   #put value of last some shitty thing in main call, anything excpet for 0-26
     if p1>= p2:
         return 0
     ans = dp[p1][p2][last]
