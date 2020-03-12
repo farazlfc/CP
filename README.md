@@ -7,3 +7,5 @@ dp_even_palin_working.py ----- Find longest even palindromic substring with no s
 max_profit_3 ----- Space complexity reduced from O(n*transactions) to O(transactions) using flag toggling. 
 
 Count_Palindromic_paths_in_matrix.py ---- https://www.geeksforgeeks.org/number-of-palindromic-paths-in-a-matrix/
+
+alien_dictionary.py --- https://practice.geeksforgeeks.org/problems/alien-dictionary/1
