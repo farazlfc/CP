@@ -11,3 +11,5 @@ Count_Palindromic_paths_in_matrix.py ---- https://www.geeksforgeeks.org/number-o
 alien_dictionary.py --- https://practice.geeksforgeeks.org/problems/alien-dictionary/1
 
 Minimum_Cost_Path_matrix_djikstra.py ---https://www.geeksforgeeks.org/minimum-cost-path-left-right-bottom-moves-allowed/
+
+Chain_of_strings.py --- find whether a circular chain of strings can be made. https://practice.geeksforgeeks.org/problems/circle-of-strings/0/
