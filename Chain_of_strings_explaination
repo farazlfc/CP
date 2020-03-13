@@ -1,0 +1,4 @@
+A chain of strings can be formed if there exists a Euler Cycle, 
+1st condition:-  In degree is equal to the Out degree for each vertex.
+2nd condition:-  There is only a single strongly connected component for the graph. To check this, do a dfs from any node having a positive degree, then see whether all the nodes with positive degrees get traversed in a single dfs traversal.
+
