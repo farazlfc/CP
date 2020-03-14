@@ -1,0 +1,47 @@
+def isScramble(A, B,dp = True):
+        def scramble(s1,s2):
+            if len(s1) != len(s2):
+                return False
+            if s1 == s2:
+                return True
+            if sorted(s1) != sorted(s2):
+                return False
+            for i in range(1,len(s1)):
+                if (scramble(s1[:i],s2[:i]) and scramble(s1[i:],s2[i:])) or (scramble(s1[:i],s2[-i:]) and scramble(s1[i:],s2[:-i])):
+                    return True
+            return False
+        #return int(scramble(A,B))
+        dp = [[[[None for _ in range(len(B)+1)] for _ in range(len(B)+1)] for _ in range(len(A)+1)] for _ in range(len(A)+1)]
+        def adv_scramble(s1,s2,I1,J1,I2,J2):  #using dynamic programming
+            if J1 - I1 != J2 - I2:
+                dp[I1][J1][I2][J2] = False;
+                return False
+            if dp[I1][J1][I2][J2] != None:
+                return dp[I1][J1][I2][J2]
+            if s1[I1:J1] == s2[I2:J2]:  #along this iteration onlh check for anagram.
+                dp[I1][J1][I2][J2] = True;
+                return True
+            if sorted(s1[I1:J1]) != sorted(s2[I2:J2]):
+                dp[I1][J1][I2][J2] = False;
+                return False
+            for i in range(1,J1-I1):
+                if(adv_scramble(s1,s2,I1,I1 + i,I2,I2+i) and adv_scramble(s1,s2,I1+i,J1,I2+i,J2)) or (adv_scramble(s1,s2,I1,I1 + i,J2 - i,J2) and adv_scramble(s1,s2,I1+i,J1,I2,J2-i)):
+                    dp[I1][J1][I2][J2] = True;return True;
+            dp[I1][J1][I2][J2] = False;return False;
+        if dp:
+          return int(adv_scramble(A,B,0,len(A),0,len(B)))
+        return int(scramble(A,B))
+A = "abcdefghlmnnfcpqrswtnzabcdefghklavomnoaapkyakhlewowmantoogoodzlassy"
+B = "manwwobadcgheflknztwrspqlmnnfcabcdghfemnoavokyaaaplekhgoodotozlassy"
+#Calculate runtime difference between w and w/o dp.
+import time
+#With dynamic programming
+start_time = time.time()
+print(isScramble(A,B))
+print(time.time() - start_time)
+#Without dynamic programming
+start_time = time.time()
+print(isScramble(A,B,dp = False))
+print(time.time() - start_time)
+
+                
