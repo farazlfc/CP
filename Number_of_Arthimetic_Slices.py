@@ -1,4 +1,4 @@
-#https://leetcode.com/problems/arithmetic-slices-ii-subsequence/submissions/
+#https://leetcode.com/problems/arithmetic-slices-ii-subsequence/
 class Solution:
     def numberOfArithmeticSlices(self, A: List[int]) -> int:
         n = len(A)
