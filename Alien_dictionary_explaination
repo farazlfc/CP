@@ -3,3 +3,5 @@ Compared 'i'th index word with the 'i+1'th index word. E.g:- Suppose 'abc' comes
 Therefore, a will come before d in the topologically sorted order for the constructed graph.
 
 Another example:- aba comes before abc , therefore an edge from a to c exists.
+
+Then, the topologically sorted sequence is the answer. IF NUMBER OF INCOMING EDGES = 0, add the node to the topologically sorted order.
