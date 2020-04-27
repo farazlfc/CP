@@ -1,4 +1,4 @@
-#https://www.codechef.com/RC122020/problems/RECNDSUB/
+#https://www.codechef.com/RC122020/problems/RECNDROT
 def findM(A, n):
     elemIdxMap = dict()
     for i in range(n):
